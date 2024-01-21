@@ -1,0 +1,512 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+	background-color: rgb(39, 39, 39);
+}
+
+html {
+    font-size: 62.5%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(171, 9, 9);
+    
+	
+}
+
+a:hover{
+	color: #434243;
+
+}
+
+.header{
+    border-bottom: 1px solid #ffffff;
+	position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+	color: #ffffff;
+}
+
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.6s ease-in-out;
+    transition: all 0.6s ease-in-out;
+    background-color: #ffffff;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-item {
+    margin-left: 5rem;
+}
+
+.nav-link{
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #ffffff;
+	font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.nav-link:hover{
+    color: #434243;
+}
+
+.nav-logo {
+	font-family: 'Brush Script MT', cursive;
+    font-size: 2.4rem;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+@media only screen and (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        flex-direction: column;
+        background-color: rgb(39, 39, 39);
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.6s;
+		font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+    .nav-menu.active {
+        left: 0;
+		position: fixed;
+		
+    }
+
+    .nav-item {
+        margin: 2.5rem 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        -webkit-transform: translateY(8px) rotate(45deg);
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        -webkit-transform: translateY(-8px) rotate(-45deg);
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+body, html {
+    height: 100%;
+}
+
+/* The hero image */
+.hero-image {
+  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("img/glavnaSlika.jpg");
+
+  /* Set a specific height */
+  height: 75%;
+
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/* Place text in the middle of the image */
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(247, 243, 243);
+  font-style:normal;
+  background-color: transparent;
+  font-family:'Times New Roman';
+  font-size: x-large;
+  
+}
+
+h1,h2 {
+	margin: 0.5em;
+	font-size: 2em;
+	font-family:'Times New Roman', Times, serif;
+}
+h2 {
+	font-size: 1.5em;
+	color: #4e5bd3;
+}
+
+p {
+	margin: 1em;
+	line-height: 1.7em;
+	letter-spacing: 1px;
+	font-size: 18px;
+	font-family: "Times New Roman";
+	color: #ffffff;
+}
+hr {
+	margin: 1em;
+	border: 1px dotted #a71111;
+	clear: both;
+}
+figure {
+	padding: 0.5em;
+	margin: 0 1em 0.5em 1em;
+	float: left;
+	width: 35%;
+	border: none;
+}
+figcaption {
+	font-size: 14px;
+	font-family: "Times New Roman";
+	border: black;
+}
+img {
+	width: 100%;
+}
+main{
+	color: white;
+}
+
+footer a {
+    margin-right: 13px;
+  }
+
+/* 
+stil za kartice 
+*/
+
+.kartice {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .kartica {
+    width: 300px;
+    height: 400px;
+    background-color: rgb(39, 39, 39);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    margin-bottom: 50px;
+    margin-left: 15px;
+    margin-right: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .kartica:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  .kartica img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .kartica h2 {
+    font-size: 22px;
+    margin: 20px;
+    color: rgb(212, 209, 209);
+  }
+  
+  .kartica p {
+    font-size: 16px;
+    margin: 0 20px 20px 20px;
+    color: grey;
+  }
+  
+  .kartica a {
+    display: block;
+    background-color: rgb(171, 9, 9);
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  .kartica a:hover {
+    background-color: rgb(136, 2, 2);
+  }
+
+/*
+stil za paginaciju
+*/
+
+.pagination {
+    display: flex;
+    justify-content: center;
+  }
+  .pagination a {
+    color: rgb(171, 9, 9);
+    font-size: large;
+    font-size: bold;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 2px solid #ddd;
+    border-radius: 15%;
+    margin: 0 4px;
+  }
+  .pagination a.active {
+    background-color: white;
+    color: white;
+    border: 1px solid white;
+  }
+  .pagination a:hover:not(.active) {
+    background-color: #ddd;
+  }
+
+  /*
+  članak
+  */
+  article {
+    max-width: 50rem;
+    margin: 1.25rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  article section {
+    margin: 20px 0;
+  }
+  
+  article h3 {
+    font-size: 1.2em;
+    margin: 0;
+  }
+  
+  article p {
+    font-size: 0.9em;
+    line-height: 1.5;
+  }
+  
+  aside {
+    max-width: 800px;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+  }
+  
+  aside h3 {
+    font-size: 1.2em;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+  }
+  
+  aside figure {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  aside img {
+    max-width: 300px;
+    height: auto;
+  }
+  
+  aside figcaption {
+    font-size: 1.6em;
+    font-style: italic;
+    margin: 10px 0 0;
+    color: white;
+  }
+
+  button {
+    /* osnovne postavke */
+    display: inline-block;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 30px;
+  
+    /* izgled */
+    color: #fff;
+    background-color: rgb(171, 9, 9);
+  
+    /* hover efekt */
+    transition: background-color 0.2s;
+  }
+  
+  button:hover {
+    background-color: rgb(136, 2, 2);
+  }
+
+  section h3 {
+    font-size: 16px;
+    color: white;
+    color: rgb(171, 9, 9);
+  }
+
+  section p {
+    font-size: 16px;
+  }
+
+  /* Stil za kontakte*/
+
+  iframe{
+    width: 80%;
+  }
+
+  form {
+    margin: auto;
+    width: 50%;
+    padding: 1.25rem;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: white;
+    font-size: 2rem;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  select,
+  textarea {
+    width: 100%;
+    padding: 12px;
+    border: 3px solid rgb(197, 16, 16);
+    border-radius: 4px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    resize: vertical;
+    margin-bottom: 14px;
+    margin-top: 2px;
+  }
+  
+  input[type="submit"] {
+    background-color: rgb(197, 16, 16);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    align-items: center;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: rgb(171, 9, 9);
+  }
+  
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+  
+  .container > * {
+    background-color: #f2f2f2;
+    border-radius: 4px;
+    padding: 20px;
+  }
+
+  /* galerija */
+
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+  
+  .gallery a {
+    width: 30%;
+    margin-bottom: 3.5rem;
+    text-align: center;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+  
+  .gallery img {
+    width: 100%;
+    height: 90%;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .gallery p {
+    font-size: 14px;
+    color: white  ;
+    margin: 10px 0 0;
+  }
+  
+  @media (max-width: 800px) {
+    .gallery a {
+      width: 45%;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .gallery a {
+      width: 90%;
+    }
+  }
+  
+  /* O nama */
+
+  video {
+    float: left;
+  }
+
+  /* registaracija*/
+  .registration-container {
+    max-width: 700px;
+    margin: auto;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin-top: 70px;
+}

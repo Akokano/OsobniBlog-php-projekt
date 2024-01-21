@@ -1,0 +1,2 @@
+<?xml version="1.0"?>
+<users><user><ime>Duje</ime><prezime>1234</prezime><datum_rodenja>2000-12-12</datum_rodenja><drzava>Hrvatska</drzava><email>1234@1234.com</email><lozinka>123456</lozinka></user><user><ime>Viki</ime><prezime>Viki&#x107;</prezime><datum_rodenja>2002-04-02</datum_rodenja><drzava>Kosovo</drzava><email>viki@vikic.hr</email><lozinka>123456</lozinka></user><user><ime>Pero</ime><prezime>Peric</prezime><datum_rodenja>2000-12-11</datum_rodenja><drzava>Hrvatska</drzava><email>pero@peric.com</email><lozinka>123456</lozinka></user></users>
